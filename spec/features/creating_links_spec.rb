@@ -10,6 +10,9 @@ feature 'create  new links' do
     fill_in('title', with: 'google')
     fill_in('URL', with: 'http://www.google.com')
     click_button('Submit')
-    expect(page).to have_content('g')
-  end
+
+    within 'ul#links' do
+    expect(page).to have_content('google')
+    end
+   end
 end
