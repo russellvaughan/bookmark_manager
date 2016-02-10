@@ -14,5 +14,5 @@ feature 'create  new links' do
     within 'ul#links' do
     expect(page).to have_content('google')
     end
-   end
+  end
 end

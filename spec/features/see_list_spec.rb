@@ -4,7 +4,7 @@
 feature 'Viewing links' do
 	scenario 'I can see links on the homepage'	do
 
-	 #Link.create(url: "www.makersacademy.com", title: "Makers Academy")
+	 Link.create(url: "www.makersacademy.com", title: "Makers Academy")
 	 visit '/links'
 	 expect(page.status_code).to eq 200
 
