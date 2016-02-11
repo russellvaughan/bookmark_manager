@@ -6,10 +6,8 @@ require 'spec_helper'
 
 feature "see links" do
   scenario "see links on homepage" do
-  visit '/'
+  visit '/links'
   Link.create(url: 'http://www.google.com', title: 'Google')
-
-
   (expect(page).to have_content 'Google')
   end
 end
