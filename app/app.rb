@@ -4,8 +4,7 @@ require_relative 'models/link'
 require 'data_mapper'
 require 'rubygems'
 require 'tilt/erb'
-
-
+require_relative 'data_mapper_setup.rb'
 
 
 class BookmarkManager < Sinatra::Base
@@ -24,7 +23,10 @@ class BookmarkManager < Sinatra::Base
   	end
 
   	post '/links' do
-  		Link.create(url: params[:url], title: params[:title])
+  		link = Link.new(url: params[:url], title: params[:title])
+      tag = Tag.create(name: params[:tags])
+      link.tags << tag 
+      link.save
   		redirect('/links')
 	end
   
