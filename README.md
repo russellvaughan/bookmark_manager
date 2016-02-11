@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# bookmark_manager
-=======
 #bookmark_manager
 
 Title of project
@@ -75,12 +72,8 @@ So that I can easily search information
 I want to filter links by tag in my bookmark manager
 
 
-Domain Model
-############
 
-Nouns = links, tag, database ==> classes
-
-Verbs = see/show, add, filter ==> methods
-
-
->>>>>>> e9203f4008409d7e69f070763bb8a2b776bc7ff2
+As a time-pressed user
+So that I can have list of related links
+I want to be able to filter links by a tag
+>>>>>>> day-two
