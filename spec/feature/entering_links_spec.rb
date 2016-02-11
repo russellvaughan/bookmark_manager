@@ -6,7 +6,7 @@ require 'spec_helper'
 
 feature 'add site address and title' 	do
 
-	scenario 'to spend less time remembering a website, add site\'s address to my bookmark manager' do 
+	scenario 'to spend less time remembering a website, add site\'s address to my bookmark manager' do
 	visit '/links/new'
 	fill_in 'url', with: 'http://www.bbc.co.uk'
 	fill_in 'title', with: 'BBC News'
