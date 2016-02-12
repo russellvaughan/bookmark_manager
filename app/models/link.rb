@@ -1,5 +1,7 @@
+
 require 'dm-postgres-adapter'
 require 'data_mapper'
+
 
 
 # This class corresponds to a table in the database
@@ -15,7 +17,6 @@ class Link
   property :title,  String
   property :url,    String
 
+ has n, :tags, :through => Resource
+
 end
-DataMapper.setup(:default, ENV['DATABASE_URL'] || "postgres://localhost/bookmark_manager_#{ENV['RACK_ENV']}")
-DataMapper.finalize
-DataMapper.auto_upgrade!
